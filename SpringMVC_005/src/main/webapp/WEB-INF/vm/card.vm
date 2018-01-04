@@ -1,0 +1,58 @@
+#parse("header.vm")
+#parse("product.vm")
+<div class="panel-body">
+    <div id="mobileTabContent" class="tab-content">
+        <!-- android list -->
+        <div class="tab-pane fade in active" id="android-list">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <td>资产号</td>
+                    <td>型号</td>
+                    <td>号码</td>
+                    <td>到期时间</td>
+                    <td>网络制式</td>
+                    <td>持有者</td>
+                    <td>借用者： <input type="text" class="borrower_$product_current.id" placeholder="请向持有者借用后再修改"></td>
+                    <td>时间</td>
+                    <td>备注</td>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- 如果android设备列表非空 -->
+                    #if($deviceLists)
+                        #foreach($device in $deviceLists)
+                        <tr>
+                            <td style="display: none;">$!device.id</td>
+                            <td>$!device.assetId</td>
+                            <td>$!device.model</td>
+                            <td>$!device.os</td>
+                            <td>$!device.resolution</td>
+                            <td>$!device.network</td>
+                            <td id="owner_$device.id">$!device.owner</td>
+                            <td>
+                                <button id="borrow_$device.id" type="button"
+                                        class="btn btn-sm btn-warning"
+                                        onclick=submit_ajax($device.id,$device.type)>借用
+                                </button>
+                            </td>
+                            <td id="time_$device.id">$!device.time</td>
+                            <td>$!device.desc</td>
+                        </tr>
+                        #end
+                    #end
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/index.js"></script>
+#parse("footer.vm")

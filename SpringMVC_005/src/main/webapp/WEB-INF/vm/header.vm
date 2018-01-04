@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>设备登记系统</title>
+    <!-- Bootstrap -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .body {
+            height: 100%;
+            overflow: hidden;
+            background: #FAFAFC;
+        }
+
+        .main {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* 数据统计页设置 */
+        .myecharts {
+            height: 350px;
+        }
+
+        .my-form-control {
+            display: inline-block;
+            width: auto;
+        }
+
+        #btn-searchDate {
+            margin-left: 10px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="body">
+    <!-- 头部  -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="http://oimagec1.ydstatic.com/image?id=7687229541746158801&product=ferarri"/>
+            </a>
+            <a class="navbar-brand" href="#">设备登记</a>
+        </div>
+<div class="collapse navbar-collapse navbar-responsive-collapse pull-right">
+            <ul class="nav navbar-nav">
+                id="mobileTab" class="nav nav-pills" role="tablist">
+                <li style="float: right;">
+                    <a href="/echarts" id="countBtn" class="btn nav-tab-btn">借用统计</a>
+                </li>
+                <li style="float: right;">
+                    <a href="/history" id="historyBtn" class="btn nav-tab-btn">借用记录</a>
+                </li>
+            </ul>
+        <a class="navbar-brand pull-right" href="mailto:123@qq.com?subject=设备登记系统意见反馈"><span
+                class="glyphicon glyphicon-envelope" title="意见反馈"></span></a>
+</div>
+    </nav>

@@ -1,0 +1,5 @@
+环境搭建方法：
+1、使用jdk7
+2、执行mvn install生成war包
+3、把target目录下的war包放到tomcat目录下的webapps/ROOT目录下解压
+4、启动tomcat

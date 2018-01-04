@@ -1,0 +1,13 @@
+<!-- 主页面  -->
+<div class="main">
+    <!-- 翻译质量数据列表 -->
+    <div id="curDailyTask" class="col-xs-12" style="margin-top:20px">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                时间范围：
+                <input type="text" id="fromDate" class="form-control my-form-control" placeholder="$!fromDate">
+                &nbsp;~&nbsp;
+                <input type="text" id="toDate" class="form-control my-form-control" placeholder="$!toDate">
+                <a class="btn btn-info" id="btn-searchDate">查询</a>
+
+            </div>

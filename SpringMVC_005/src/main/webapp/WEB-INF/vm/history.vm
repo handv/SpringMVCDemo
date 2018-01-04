@@ -1,0 +1,43 @@
+#parse("header.vm")
+#parse("product.vm")
+<div class="panel-body">
+    <div id="mobileTabContent" class="tab-content">
+        <!-- android list -->
+        <div class="tab-pane fade in active" id="android-list">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <td>时间</td>
+                    <td>设备</td>
+                    <td>持有者</td>
+                    <td>借用者</td>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- 如果历史记录列表非空 -->
+                    #if($historyLists)
+                        #foreach($history in $historyLists)
+                        <tr>
+                            <td style="display: none;">$!history.id</td>
+                            <td>$!history.time</td>
+                            <td>$!history.model</td>
+                            <td>$!history.owner</td>
+                            <td>$!history.borrower</td>
+                        </tr>
+                        #end
+                    #end
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/index.js"></script>
+#parse("footer.vm")

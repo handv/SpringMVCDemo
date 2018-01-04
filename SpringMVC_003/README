@@ -1,0 +1,10 @@
+使用ajax返回数据，异步修改页面的例子。
+要点：
+1、如果要返回数据，而不是网页，需要在controller中添加@ResponseBody
+2、如果要返回数据，ajax请求要写对，success返回值
+dataType:'html'，
+success:function(data, textStatus){
+                $("span").html(data);
+            },
+3、解决返回中文乱码问题，在controller中的RequestMapping添加：
+produces = "text/html;charset=UTF-8"
